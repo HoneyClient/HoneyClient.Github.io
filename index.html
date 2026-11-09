@@ -31,13 +31,12 @@
     <!-- Navigation -->
     <nav class="glass-nav">
         <div class="logo">
-            <!-- Using the SVG asset -->
             <img src="assets/honeycomb.png" alt="HoneyClient Logo" id="nav-logo">
             <span>HoneyClient</span>
         </div>
         <div class="links">
             <a href="https://github.com/HoneyClient" target="_blank">GitHub</a>
-            <a href="#" class="btn-discord">Join Discord</a>
+            <a href="https://discord.gg/qAKpyKM3GP" target="_blank" class="btn-discord">Join Discord</a>
         </div>
     </nav>
 
@@ -47,7 +46,6 @@
             <!-- The glowing app icon container -->
             <div class="app-icon-container">
                 <div class="icon-glow"></div>
-                <!-- Using the SVG asset -->
                 <img src="assets/app-icon.png" alt="HoneyClient App Icon" class="app-icon">
             </div>
 
@@ -62,6 +60,19 @@
                 <a href="https://github.com/HoneyClient" target="_blank" class="glass-btn secondary">
                     <span class="btn-text">View Source</span>
                 </a>
+            </div>
+
+            <!-- Live Discord Stats Counter -->
+            <div class="discord-stats glass-panel">
+                <div class="stat">
+                    <span class="stat-value" id="member-count">--</span>
+                    <span class="stat-label">Members</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value" id="online-count">--</span>
+                    <span class="stat-label">Online</span>
+                </div>
             </div>
         </div>
     </main>
@@ -88,5 +99,5 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
+</body> 
 </html>
