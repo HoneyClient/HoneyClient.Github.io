@@ -10,7 +10,7 @@ document.addEventListener('mousemove', (e) => {
     if (glow) glow.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
 });
 
-// Simple fade-in animation on load
+// Fade-in animation on load
 window.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelector('.hero-content');
     hero.style.opacity = 0;
@@ -21,4 +21,30 @@ window.addEventListener('DOMContentLoaded', () => {
         hero.style.opacity = 1;
         hero.style.transform = 'translateY(0)';
     }, 100);
+
+    // Fetch Discord Live Stats using the Invite API
+    // We use the invite code to get the approximate member and online counts
+    const discordInviteCode = 'qAKpyKM3GP';
+    
+    fetch(`https://discord.com/api/v10/invites/${discordInviteCode}?with_counts=true`)
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+            // Update the DOM with the counts
+            const memberCountEl = document.getElementById('member-count');
+            const onlineCountEl = document.getElementById('online-count');
+            
+            if (memberCountEl && data.approximate_member_count) {
+                memberCountEl.textContent = data.approximate_member_count;
+            }
+            if (onlineCountEl && data.approximate_presence_count) {
+                onlineCountEl.textContent = data.approximate_presence_count;
+            }
+        })
+        .catch(error => {
+            console.warn('Could not fetch Discord stats:', error);
+            // If it fails (e.g., rate limited), leave the "--" placeholder
+        });
 });
