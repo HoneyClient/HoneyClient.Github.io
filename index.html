@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoneyClient | The Future of Bedrock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Honey Drip Effect -->
+    <div class="honey-drip">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,0 C240,120 480,0 720,100 C960,200 1200,0 1440,80 L1440,0 L0,0 Z" fill="url(#honeyGradient)"></path>
+            <defs>
+                <linearGradient id="honeyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#F7C23A" stop-opacity="0.8"/>
+                    <stop offset="50%" stop-color="#FFD25E" stop-opacity="0.9"/>
+                    <stop offset="100%" stop-color="#E0A01B" stop-opacity="0.8"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="stars"></div>
+    <div class="glow-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <!-- Using the SVG asset -->
+            <img src="assets/honeycomb.svg" alt="HoneyClient Logo" id="nav-logo">
+            <span>HoneyClient</span>
+        </div>
+        <div class="links">
+            <a href="https://github.com/HoneyClient" target="_blank">GitHub</a>
+            <a href="#" class="btn-discord">Join Discord</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="hero">
+        <div class="hero-content">
+            <!-- The glowing app icon container -->
+            <div class="app-icon-container">
+                <div class="icon-glow"></div>
+                <!-- Using the SVG asset -->
+                <img src="assets/app-icon.svg" alt="HoneyClient App Icon" class="app-icon">
+            </div>
+
+            <h1 class="pixel-title">HONEYCLIENT</h1>
+            <p class="subtitle">The most advanced, open-source Minecraft Bedrock client.<br>Designed for performance. Built for creators.</p>
+
+            <div class="cta-group">
+                <button class="glass-btn primary">
+                    <span class="btn-text">Coming Soon</span>
+                    <div class="btn-shine"></div>
+                </button>
+                <a href="https://github.com/HoneyClient" target="_blank" class="glass-btn secondary">
+                    <span class="btn-text">View Source</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card glass-panel">
+            <h3 class="pixel-subtitle">Native C++</h3>
+            <p>Powered by the BerryAPI preloader. Unrestricted access to the game engine for maximum FPS and zero lag.</p>
+        </div>
+        <div class="feature-card glass-panel">
+            <h3 class="pixel-subtitle">Cinematic UI</h3>
+            <p>Built from scratch with Jetpack Compose. A premium glassmorphic interface that feels like a AAA game launcher.</p>
+        </div>
+        <div class="feature-card glass-panel">
+            <h3 class="pixel-subtitle">Infinite Mods</h3>
+            <p>Run full Java Edition mods and custom Luau scripts natively on Android with our proprietary .universe framework.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <p>&copy; 2026 HoneyClient / ChimeraTeam. Not affiliated with Mojang or Microsoft.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
